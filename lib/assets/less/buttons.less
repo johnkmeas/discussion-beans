@@ -1,0 +1,154 @@
+/* All Buttons
+*/
+#buddypress .generic-button a,
+#buddypress a.button,
+#bbp_topic_submit,
+a.friendship-button,
+input[name="d4p_attachment[]"],
+.bbp-topic-reply-link,
+.bbp-reply-to-link,
+.d4p-bbt-quote-link,
+button[type="submit"],
+.button.register,
+.button.login,
+#buddypress input[type=submit],
+#buddypress .standard-form button {
+    background: #fff;
+    border: 1px solid @link-color !important;
+    color: @link-color !important;
+    font-size: small;
+    cursor: pointer;
+    outline: 0;
+    padding: 8px 12px !important;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Forum buttons
+*/
+
+#buddypress a.bp-primary-action span {
+    background: @link-color !important;
+}
+
+.bbp-topic-reply-link,
+.bbp-reply-to-link {
+    background: @link-color !important;
+    // color: @light-text;
+    border: 1px solid  @link-color !important;
+}
+
+span.bbp-admin-links a {
+    &.bbp-topic-reply-link,
+    &.bbp-reply-to-link
+     {
+        color: @ltgrey-blue !important;
+        &:hover {
+            color: @link-color !important;
+        }
+    }
+}
+
+span.bbp-admin-links a {
+    &.d4p-bbt-quote-link {
+        color: @link-color !important;
+    }
+}
+
+.d4p-bbt-quote-link {
+    background: none;
+    border: 1px solid  @link-color !important;
+}
+
+/* General buttons
+*/
+
+.front-pg-button-group {
+    margin-top: 5rem;
+}
+
+
+.button.register,
+.button.login {
+    border: 2px solid @dk-aqua !important;
+    font-size: 1.2rem;
+    padding: 1.2rem 4rem !important;
+    -webkit-box-shadow: 0px 4px 15px 2px rgba(0,0,0,0.40);
+    -moz-box-shadow: 0px 4px 15px 2px rgba(0,0,0,0.40);
+    box-shadow: 0px 4px 15px 2px rgba(0,0,0,0.40);
+    transition: 200ms;
+
+    &:hover{
+        background: @aqua !important;
+        border: 2px solid @aqua !important;
+        color: @dker-aqua !important;
+        -webkit-box-shadow: 0px 8px 30px 6px rgba(0,0,0,0.40);
+        -moz-box-shadow: 0px 8px 30px 6px rgba(0,0,0,0.40);
+        box-shadow: 0px 8px 30px 6px rgba(0,0,0,0.40);
+    }
+
+}
+
+.button.register {
+    background: @dk-aqua !important;
+    color: @light-text !important;
+    margin-right: 0.5rem;
+}
+
+.button.login {
+    background: none !important;
+    color: @dk-aqua !important;
+    margin-left: 0.5rem;
+}
+
+button[type="submit"],
+#bbp_topic_submit {
+    background: @hover-color !important;
+    border: none;
+    color: @light-text !important;
+    padding: 1rem 1.6rem;
+    transition: 200ms;
+
+}
+
+/* All buttons hovers
+*/
+.button,
+#buddypress .generic-button a,
+a.page-numbers,
+button[type="submit"],
+#buddypress input[type=submit],
+a.friendship-button,
+#bbp_topic_submit,
+.bbp-topic-reply-link,
+.bbp-reply-to-link,
+.d4p-bbt-quote-link,
+#buddypress .standard-form button {
+    transition: 200ms;
+    &:hover {
+        background: @aqua !important;
+        color: @link-color !important;
+        -webkit-box-shadow: 0px 2px 6px 0px rgba(5,5,5,0.3);
+        -moz-box-shadow: 0px 2px 6px 0px rgba(5,5,5,0.3);
+        box-shadow: 0px 2px 6px 0px rgba(5,5,5,0.3);
+    }
+}
+
+.page-numbers.current {
+    background: @aqua !important;
+    color: @link-color !important;
+}
+
+.page-numbers {
+    border: 1px solid @link-color !important;
+}
+
+.uk-form select {
+    border-radius: 0 !important;
+}
+
+#buddypress a.button:focus {
+    background: @lt-aqua !important;
+}
+
+
