@@ -57,10 +57,10 @@ function fnsa_add_hero() {
                     <?php echo $hero['heading'] ?>
                     <div class="front-pg-button-group">
                     <?php if( !is_user_logged_in()){ ?>
-                        <a class="button register" href="<?php echo get_permalink( get_page_by_path( 'register' ) ) ?>">SIGNUP</a>
+                        <a class="button register" href="<?php echo get_permalink( get_page_by_path( 'register' ) ) ?>">SIGN UP</a>
                         <a class="button login" href="<?php echo wp_login_url( $redirect ); ?>">LOGIN</a>
                     <?php }else { ?>
-                        <a class="button register" href="<?php echo bp_loggedin_user_domain() ?>">Go to Profile</a>
+                        <a class="button register" href="<?php echo bp_loggedin_user_domain() ?>">MY PROFILE</a>
                     <?php } ?>
                     </div>
                 </div>
@@ -84,10 +84,14 @@ function fnsa_add_content_main() {
     echo beans_open_markup('fnsa_container', 'div', array('class' => 'uk-container uk-container-center'));
         echo beans_open_markup('fnsa_block', 'div', array('class' => 'uk-block uk-block-large uk-block-muted'));
             ?>
-            <div class="fnsa-main-header uk-text-center uk-margin-large-bottom">
-                <div class="fnsa-main-heading"><?php the_field('heading'); ?></div>
-                <i class="uk-text-small">-<?php the_field('heading_credit'); ?></i>
-            </div>
+            <?php if( get_field('heading') !== '' ){ ?>
+                <div class="fnsa-main-header uk-text-center uk-margin-large-bottom">
+                    <div class="fnsa-main-heading"><?php the_field('heading'); ?></div>
+                    <?php if( get_field('heading_credit') !== '' ){ ?>
+                        <i class="uk-text-small">-<?php the_field('heading_credit'); ?></i>
+                <?php }  ?>
+                </div>
+            <?php }  ?>
             <?php
 
             echo beans_open_markup( 'fnsa_main_content', 'div',  array( 'class' => 'uk-grid uk-grid-width-large-1-2 uk-grid-width-medium-1-2 uk-grid-width-small-1-1' ) );
@@ -125,10 +129,10 @@ function fnsa_add_action() {
                 <?php echo $action['heading'] ?>
                     <div class="front-pg-button-group">
                     <?php if( !is_user_logged_in()){ ?>
-                        <a class="button register" href="<?php echo get_permalink( get_page_by_path( 'register' ) ) ?>">SIGNUP</a>
+                        <a class="button register" href="<?php echo get_permalink( get_page_by_path( 'register' ) ) ?>">SIGN UP</a>
                         <a class="button login" href="<?php echo wp_login_url( $redirect ); ?>">LOGIN</a>
                     <?php }else { ?>
-                        <a class="button register" href="<?php echo bp_loggedin_user_domain() ?>">Go to Profile</a>
+                        <a class="button register" href="<?php echo bp_loggedin_user_domain() ?>">My PROFILE</a>
                     <?php } ?>
                     </div>
                 </div>

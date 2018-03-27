@@ -55,6 +55,21 @@ function load_custom_wp_admin_style() {
  ****************************
  */
 
+
+/*
+* Force Full width layout
+*
+*/
+
+add_filter( 'beans_layout', 'example_force_layout' );
+
+function example_force_layout() {
+
+    return 'c';
+
+}
+
+
 beans_add_attribute( 'beans_main', 'class', 'fnsa-margin-large-top' );
 
 // beans_add_attribute( 'beans_main_grid', 'class', 'uk-margin-large-top' );
@@ -77,9 +92,7 @@ add_action( 'template_redirect', function() {
             wp_redirect(site_url( '/' ));
             exit();
         }
-
     }
-
 });
 
 
@@ -115,6 +128,13 @@ function beans_child_footer_content() { ?>
  *
  *
  */
+
+
+/*
+ * Add bottom margin to beans primary section on subpages
+ */
+
+beans_add_attribute( 'beans_primary', 'class', 'uk-margin-large-bottom' );
 
 /*
  * BBpress visual editor
@@ -170,5 +190,16 @@ function buddydev_reorder_buddypress_profile_tabs() {
         $nav->edit_nav( array( 'position' => $position ), $nav_item );
     }
 }
+
+/*
+* Remove admin bar default
+*/
+
+add_filter('show_admin_bar', '__return_false');
+
+/* Remove admin bar */
+// remove_action('init', 'wp_admin_bar_init');
+
+// show_admin_bar(false);
 
 
