@@ -51,7 +51,7 @@ function fnsa_add_hero() {
     $hero = get_field('hero_section');
     $text_color = $hero['text_colour'];
     if( $hero ) { ?>
-         <div class="uk-cover-background custom-bg" style="background-image: url(<?php echo $hero['background_image']['url'] ?> ">
+        <div class="uk-cover-background custom-bg" style="background-image: url(<?php echo $hero['background_image']['url'] ?> ">
             <div class="uk-container uk-container-center">
                 <div class="hero-content uk-flex uk-flex-center uk-flex-middle fnsa-hero-copy text-light uk-text-center ">
                     <?php echo $hero['heading'] ?>
